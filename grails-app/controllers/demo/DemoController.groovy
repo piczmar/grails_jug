@@ -6,7 +6,7 @@ class DemoController{
 
 	def myService
 	def oldSpringService
-
+	def springSecurityService
 	def action(DemoCommand cmd){
 
 		println cmd
@@ -37,5 +37,9 @@ class DemoController{
 	}
 	def useOldSpring(){
 		render oldSpringService.hello()
+	}
+	def currentUser(){
+		def user = springSecurityService.currentUser
+		render user
 	}
 }

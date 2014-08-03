@@ -10,6 +10,13 @@ class BootStrap {
 			new Question(body: "question $it", quiz: q).save()
 			}
 		}
+
+
+		def user = new User(username: "u1", password: "u1").save()
+		def role = new Role(authority: "ROLE_USER").save()
+
+		UserRole.create user, role, true
+
     }
     def destroy = {
     }
