@@ -1,7 +1,0 @@
-package demo
-
-@groovy.transform.CompileStatic
-class MyService{
-
-	String
-}
