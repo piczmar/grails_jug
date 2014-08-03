@@ -10,12 +10,13 @@ import spock.lang.Specification
 class QuizSpec extends Specification {
 
     def setup() {
+		mockForConstraintsTests(Quiz)
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
+    void "test quiz name is required"() {
 		given: 'new Quiz instance'
 		def q = new Quiz()
 
@@ -25,7 +26,21 @@ class QuizSpec extends Specification {
 		println "Id: ${q.id}"
 
 		then: 'instance id auto generated'
-		q.id != null
+		q.errors['name'] == 'nullable'
+			
+
+    }
+    void "test quiz name is max 10 digits"() {
+		given: 'new Quiz instance'
+		def q = new Quiz(name: 'this is a very long name')
+
+		when: 'save instance'
+		q.save()
+
+		println "Id: ${q.id}"
+
+		then: 'instance id auto generated'
+		q.errors['name'] == 'maxSize'
 			
 
     }

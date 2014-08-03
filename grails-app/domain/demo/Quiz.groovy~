@@ -16,8 +16,4 @@ class Quiz {
 		id column: 'QUIZ_ID'
 		description column: 'DESC'
 	}
-
-	String toString(){
-		return name
-	}
 }

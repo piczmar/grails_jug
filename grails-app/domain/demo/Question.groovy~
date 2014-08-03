@@ -3,7 +3,6 @@ package demo
 class Question {
 	String body
 	Quiz quiz
-
     static constraints = {
     }
 }

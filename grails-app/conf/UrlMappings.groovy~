@@ -11,6 +11,5 @@ class UrlMappings {
         "500"(view:'/error')
 
 		"/api/$action?(.$format)" (version: '1.0', namespace: 'v1', controller: 'demo')
-		"/api/$action?(.$format)" (version: '2.0', namespace: 'v2', controller: 'demo')
 	}
 }

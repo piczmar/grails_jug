@@ -1,0 +1,9 @@
+
+class DemoController{
+	def action(DemoCommand cmd){
+
+		println cmd
+		Map result = [key: "value"]
+		render text: result, contentType: 'application/json', code: 200
+	}
+}

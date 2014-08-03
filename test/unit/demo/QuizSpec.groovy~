@@ -10,22 +10,23 @@ import spock.lang.Specification
 class QuizSpec extends Specification {
 
     def setup() {
+		mockForConstraintsTests(Quiz)
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
+    void "test quiz name is required"() {
 		given: 'new Quiz instance'
 		def q = new Quiz()
 
 		when: 'save instance'
 		q.save()
 
-		pritln "Id: ${q.id}"
+		println "Id: ${q.id}"
 
 		then: 'instance id auto generated'
-		q.id != null
+		q.errors['name'] == 'nullable'
 			
 
     }

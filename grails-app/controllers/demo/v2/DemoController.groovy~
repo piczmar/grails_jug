@@ -1,0 +1,6 @@
+package demo.v2
+class DemoController{
+	def action(){
+		render "V2"
+	}
+}
