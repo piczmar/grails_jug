@@ -5,6 +5,8 @@ class DemoController{
 	static namespace = 'v1'
 
 	def myService
+	def oldSpringService
+
 	def action(DemoCommand cmd){
 
 		println cmd
@@ -32,5 +34,8 @@ class DemoController{
 
 	def useService(){
 		render myService.method()
+	}
+	def useOldSpring(){
+		render oldSpringService.hello()
 	}
 }

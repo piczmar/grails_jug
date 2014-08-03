@@ -12,5 +12,8 @@ class UrlMappings {
 
 		"/api/$action?(.$format)" (version: '1.0', namespace: 'v1', controller: 'demo')
 		"/api/$action?(.$format)" (version: '2.0', namespace: 'v2', controller: 'demo')
+
+
+		'/mvc/test'(uri:"/mvc/test.dispatch")
 	}
 }

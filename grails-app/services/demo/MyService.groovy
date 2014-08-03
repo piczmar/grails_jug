@@ -17,9 +17,6 @@ class MyService{
 
 		def result = Quiz.find(new Quiz(name: 'test 1'))*/
 
-
-		println result
-
 		return "Hello there"
 	}
 }
